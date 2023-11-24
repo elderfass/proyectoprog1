@@ -82,6 +82,7 @@ class Persona {
                 return;
             }
         }
+        return true;
     }
 
     buscar(array, index, rows) {

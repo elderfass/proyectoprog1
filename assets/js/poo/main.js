@@ -27,6 +27,7 @@ function enviarDatos() {
         }
     } else {
         alert("Por favor, revise los campos. No pueden estar vacíos.");
+        personas.splice(contador, 1);
     }
 }
 
@@ -57,6 +58,7 @@ function eliminar(){
     var nuevoRol = document.getElementById("rol").value;
 
     var personad = new Persona(nuevoid, nuevoNombre, nuevoEmail, nuevaClave, nuevoRol);
+    console.log(personad)
     if (!persona.buscar(personas, (contador - 1), rows)) {
         var p=persona.eliminarPersona(personad, personas, table);
         if (p){
